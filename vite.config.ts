@@ -15,7 +15,15 @@ const config = defineConfig({
       projects: ['./tsconfig.json'],
     }),
     tailwindcss(),
-    tanstackStart(),
+    tanstackStart({
+      prerender: {
+        enabled: true,
+      },
+      sitemap: {
+        enabled: true,
+        host: 'https://webforgeconf.com',
+      },
+    }),
     viteReact(),
   ],
 })
