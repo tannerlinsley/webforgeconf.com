@@ -1,0 +1,15 @@
+{
+  "projectName": "webdevfest",
+  "mode": "file-router",
+  "typescript": true,
+  "tailwind": true,
+  "packageManager": "pnpm",
+  "addOnOptions": {},
+  "git": true,
+  "version": 1,
+  "framework": "react-cra",
+  "chosenAddOns": [
+    "netlify",
+    "start"
+  ]
+}
