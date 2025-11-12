@@ -1,6 +1,4 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { useState } from 'react'
-import { ChevronDown, ChevronUp } from 'lucide-react'
 import {
   LuCode,
   LuUsers,
@@ -30,8 +28,6 @@ const FORM_URLS = {
 export const Route = createFileRoute('/')({ component: LandingPage })
 
 function LandingPage() {
-  const [openFaq, setOpenFaq] = useState<number | null>(null)
-
   const faqs = [
     {
       question: 'Is this for profit?',
@@ -609,29 +605,22 @@ function LandingPage() {
           </h2>
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <div
+              <details
                 key={index}
-                className="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl shadow-black/10 dark:shadow-black/20 overflow-hidden"
+                className="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl shadow-black/10 dark:shadow-black/20 overflow-hidden group"
               >
-                <button
-                  onClick={() => setOpenFaq(openFaq === index ? null : index)}
-                  className="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-blue-100 dark:hover:bg-gray-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset"
-                >
+                <summary className="px-6 py-5 cursor-pointer list-none flex items-center justify-between hover:bg-blue-100 dark:hover:bg-gray-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset">
                   <span className="font-semibold text-gray-900 dark:text-white">
                     {faq.question}
                   </span>
-                  {openFaq === index ? (
-                    <ChevronUp className="w-5 h-5 text-blue-600 dark:text-blue-400 flex-shrink-0" />
-                  ) : (
-                    <ChevronDown className="w-5 h-5 text-blue-600 dark:text-blue-400 flex-shrink-0" />
-                  )}
-                </button>
-                {openFaq === index && (
-                  <div className="px-6 pb-5 text-gray-700 dark:text-gray-300">
-                    {faq.answer}
-                  </div>
-                )}
-              </div>
+                  <span className="text-blue-600 dark:text-blue-400 shrink-0 ml-4 transition-transform group-open:rotate-180">
+                    ▼
+                  </span>
+                </summary>
+                <div className="px-6 pb-5 text-gray-700 dark:text-gray-300">
+                  {faq.answer}
+                </div>
+              </details>
             ))}
           </div>
         </div>
