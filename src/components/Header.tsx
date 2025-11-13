@@ -13,9 +13,7 @@ export default function Header() {
               window.scrollTo({ top: 0, behavior: 'smooth' })
             }}
           >
-            <span className="text-blue-800 dark:text-blue-400">
-              Web Forge 2026
-            </span>
+            <span className="text-black dark:text-white">Web Forge 2026</span>
           </Link>
           <div className="hidden md:flex items-center gap-6">
             <Link
@@ -53,6 +51,21 @@ export default function Header() {
             >
               FAQ
             </Link>
+            <Link
+              to="/"
+              hash="discord"
+              className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            >
+              Community
+            </Link>
+            <a
+              href="https://discord.gg/4Te4F9Ap"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-3 py-1.5 text-xs font-medium text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
+            >
+              Discord
+            </a>
             <a
               href="https://docs.google.com/forms/d/e/1FAIpQLSdNYlfKaLvHry4Z-8bgbeszCMgQOSSB1drOE1EgKD5FUrQUoA/viewform?usp=pp_url"
               target="_blank"

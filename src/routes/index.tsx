@@ -12,6 +12,8 @@ import {
   LuVideo,
   LuBuilding2,
 } from 'react-icons/lu'
+import { FaDiscord, FaXTwitter } from 'react-icons/fa6'
+import { SiBluesky } from 'react-icons/si'
 
 // Google Form URLs for each type
 const FORM_URLS = {
@@ -78,6 +80,15 @@ function LandingPage() {
               className="px-8 py-4 bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white font-semibold rounded-2xl transition-colors shadow-lg shadow-blue-500/20 dark:shadow-blue-500/30 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800"
             >
               Register your interest
+            </a>
+            <a
+              href="https://discord.gg/4Te4F9Ap"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-4 bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600 text-white font-semibold rounded-2xl transition-colors shadow-lg shadow-indigo-500/20 dark:shadow-indigo-500/30 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 flex items-center gap-2"
+            >
+              <FaDiscord className="w-5 h-5" />
+              Join Discord
             </a>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-4">
@@ -650,25 +661,25 @@ function LandingPage() {
           <div className="grid sm:grid-cols-2 gap-4 mb-6">
             <a
               href={FORM_URLS.developer}
-              className="px-6 py-4 bg-blue-800 hover:bg-blue-700 dark:bg-gray-800 dark:hover:bg-gray-700 text-white font-semibold rounded-2xl transition-colors border border-blue-700 dark:border-gray-700 shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-blue-900 dark:focus:ring-offset-gray-950"
+              className="px-6 py-4 bg-white hover:bg-blue-50 dark:bg-white dark:hover:bg-gray-100 text-blue-900 dark:text-gray-900 font-semibold rounded-2xl transition-colors border border-white/20 shadow-lg focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-900 dark:focus:ring-offset-gray-950"
             >
               I am a developer
             </a>
             <a
               href={FORM_URLS.creator}
-              className="px-6 py-4 bg-blue-800 hover:bg-blue-700 dark:bg-gray-800 dark:hover:bg-gray-700 text-white font-semibold rounded-2xl transition-colors border border-blue-700 dark:border-gray-700 shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-blue-900 dark:focus:ring-offset-gray-950"
+              className="px-6 py-4 bg-white hover:bg-blue-50 dark:bg-white dark:hover:bg-gray-100 text-blue-900 dark:text-gray-900 font-semibold rounded-2xl transition-colors border border-white/20 shadow-lg focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-900 dark:focus:ring-offset-gray-950"
             >
               I am a creator
             </a>
             <a
               href={FORM_URLS.sponsor}
-              className="px-6 py-4 bg-blue-800 hover:bg-blue-700 dark:bg-gray-800 dark:hover:bg-gray-700 text-white font-semibold rounded-2xl transition-colors border border-blue-700 dark:border-gray-700 shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-blue-900 dark:focus:ring-offset-gray-950"
+              className="px-6 py-4 bg-white hover:bg-blue-50 dark:bg-white dark:hover:bg-gray-100 text-blue-900 dark:text-gray-900 font-semibold rounded-2xl transition-colors border border-white/20 shadow-lg focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-900 dark:focus:ring-offset-gray-950"
             >
               I represent a sponsor
             </a>
             <a
               href={FORM_URLS.organizer}
-              className="px-6 py-4 bg-blue-800 hover:bg-blue-700 dark:bg-gray-800 dark:hover:bg-gray-700 text-white font-semibold rounded-2xl transition-colors border border-blue-700 dark:border-gray-700 shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-blue-900 dark:focus:ring-offset-gray-950"
+              className="px-6 py-4 bg-white hover:bg-blue-50 dark:bg-white dark:hover:bg-gray-100 text-blue-900 dark:text-gray-900 font-semibold rounded-2xl transition-colors border border-white/20 shadow-lg focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-900 dark:focus:ring-offset-gray-950"
             >
               I am an organizer or partner
             </a>
@@ -679,6 +690,73 @@ function LandingPage() {
           >
             I am not sure
           </a>
+        </div>
+      </section>
+
+      {/* Discord Community Section */}
+      <section
+        id="discord"
+        className="relative py-40 px-6 bg-gradient-to-br from-indigo-600 via-purple-600 to-blue-600 dark:from-indigo-900 dark:via-purple-900 dark:to-blue-900 text-white scroll-mt-36"
+      >
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
+            <a
+              href="#discord"
+              className="inline-block px-10 py-5 bg-white/80 dark:bg-gray-900/70 backdrop-blur-md text-gray-900 dark:text-white text-4xl md:text-5xl font-display rounded-full border-2 border-white/40 dark:border-white/20 shadow-2xl shadow-black/30 dark:shadow-lg hover:bg-white dark:hover:bg-gray-900 transition-colors cursor-pointer"
+            >
+              Community
+            </a>
+          </div>
+          <div className="mb-8">
+            <FaDiscord className="w-16 h-16 mx-auto mb-6 opacity-90" />
+            <h2 className="text-4xl md:text-5xl font-display mb-6">
+              Join the Community
+            </h2>
+            <p className="text-xl text-indigo-100 dark:text-indigo-200 mb-4 max-w-2xl mx-auto leading-relaxed">
+              Connect with fellow developers, creators, and organizers in our
+              Discord server. Share your ideas, excitement, and help shape the
+              future of Web Forge Conference.
+            </p>
+            <p className="text-lg text-indigo-200 dark:text-indigo-300 mb-8 max-w-2xl mx-auto">
+              Let's build something amazing together.
+            </p>
+          </div>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+            <a
+              href="https://discord.gg/4Te4F9Ap"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-4 bg-white hover:bg-indigo-50 text-indigo-600 dark:text-indigo-900 font-semibold rounded-2xl transition-all shadow-xl hover:shadow-2xl transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600 flex items-center gap-3"
+            >
+              <FaDiscord className="w-6 h-6" />
+              Join Discord Server
+            </a>
+          </div>
+          <div className="pt-8 border-t border-white/20">
+            <p className="text-lg text-indigo-100 dark:text-indigo-200 mb-6">
+              Share your excitement about Web Forge Conference
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a
+                href="https://twitter.com/intent/tweet?text=I'm%20excited%20about%20%40webforgeconf%20-%20a%20new%20kind%20of%20web%20developer%20conference%20built%20for%20creators%20and%20developers!%20Less%20stage.%20More%20story.%20All%20signal.%20%0A%0Ahttps%3A%2F%2Fwebforgeconf.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group px-6 py-3 bg-black/20 hover:bg-black/30 backdrop-blur-sm text-white font-semibold rounded-xl transition-all shadow-lg hover:shadow-xl transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600 flex items-center gap-2 border border-white/20 hover:border-white/40"
+              >
+                <FaXTwitter className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                Share on X
+              </a>
+              <a
+                href="https://bsky.app/intent/compose?text=I'm%20excited%20about%20Web%20Forge%20Conference%20-%20a%20new%20kind%20of%20web%20developer%20conference%20built%20for%20creators%20and%20developers!%20Less%20stage.%20More%20story.%20All%20signal.%20%0A%0Ahttps%3A%2F%2Fwebforgeconf.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group px-6 py-3 bg-sky-500/20 hover:bg-sky-500/30 backdrop-blur-sm text-white font-semibold rounded-xl transition-all shadow-lg hover:shadow-xl transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600 flex items-center gap-2 border border-white/20 hover:border-white/40"
+              >
+                <SiBluesky className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                Share on Bluesky
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -712,6 +790,14 @@ function LandingPage() {
                 Links
               </h3>
               <div className="flex flex-col gap-2">
+                <a
+                  href="https://discord.gg/4Te4F9Ap"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-300 dark:text-gray-500 hover:text-white dark:hover:text-gray-300 transition-colors"
+                >
+                  Discord
+                </a>
                 <a
                   href="https://github.com/webforgeconf"
                   className="text-blue-300 dark:text-gray-500 hover:text-white dark:hover:text-gray-300 transition-colors"
