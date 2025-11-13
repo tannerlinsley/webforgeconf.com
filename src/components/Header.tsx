@@ -1,4 +1,5 @@
 import { Link } from '@tanstack/react-router'
+import { LuFlame } from 'react-icons/lu'
 
 export default function Header() {
   return (
@@ -7,12 +8,13 @@ export default function Header() {
         <nav className="flex items-center justify-between">
           <Link
             to="/"
-            className="text-3xl font-display hover:opacity-80 transition-opacity"
+            className="text-3xl font-display hover:opacity-80 transition-opacity flex items-center gap-2"
             onClick={(e) => {
               e.preventDefault()
               window.scrollTo({ top: 0, behavior: 'smooth' })
             }}
           >
+            <LuFlame className="w-7 h-7 text-blue-600 dark:text-blue-400" />
             <span className="text-black dark:text-white">Web Forge 2026</span>
           </Link>
           <div className="hidden md:flex items-center gap-6">
