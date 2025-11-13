@@ -14,36 +14,41 @@ export default function Header() {
             }}
           >
             <span className="text-blue-800 dark:text-blue-400">
-              Web Forge Conf
+              Web Forge 2026
             </span>
           </Link>
           <div className="hidden md:flex items-center gap-6">
             <Link
-              to="#developer"
+              to="/"
+              hash="developer"
               className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
             >
               Developers
             </Link>
             <Link
-              to="#creator"
+              to="/"
+              hash="creator"
               className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
             >
               Creators
             </Link>
             <Link
-              to="#sponsor"
+              to="/"
+              hash="sponsor"
               className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
             >
               Sponsors
             </Link>
             <Link
-              to="#organizer"
+              to="/"
+              hash="organizer"
               className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
             >
               Organizers
             </Link>
             <Link
-              to="#faq"
+              to="/"
+              hash="faq"
               className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
             >
               FAQ

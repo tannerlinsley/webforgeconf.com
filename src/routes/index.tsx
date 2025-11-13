@@ -62,7 +62,7 @@ function LandingPage() {
       >
         <div className="max-w-5xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-display text-blue-900 dark:text-blue-100 mb-6">
-            Web Forge Conf
+            Web Forge Conference
           </h1>
           <p className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 mb-4 max-w-3xl mx-auto font-light">
             A new kind of web developer conference
