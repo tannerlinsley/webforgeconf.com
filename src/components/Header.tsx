@@ -59,14 +59,6 @@ export default function Header() {
               Community
             </Link>
             <a
-              href="https://discord.gg/4Te4F9Ap"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-3 py-1.5 text-xs font-medium text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
-            >
-              Discord
-            </a>
-            <a
               href="https://docs.google.com/forms/d/e/1FAIpQLSdNYlfKaLvHry4Z-8bgbeszCMgQOSSB1drOE1EgKD5FUrQUoA/viewform?usp=pp_url"
               target="_blank"
               rel="noopener noreferrer"
