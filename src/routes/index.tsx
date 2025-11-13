@@ -447,10 +447,10 @@ function LandingPage() {
                 return (
                   <div
                     key={index}
-                    className="bg-white dark:bg-gray-900 rounded-3xl p-6 shadow-2xl shadow-black/10 dark:shadow-black/20 hover:shadow-2xl hover:shadow-black/15 dark:hover:shadow-black/30 transition-shadow"
+                    className="flex flex-col items-center bg-white dark:bg-gray-900 rounded-full p-6 shadow-2xl shadow-black/10 dark:shadow-black/20 hover:shadow-2xl hover:shadow-black/15 dark:hover:shadow-black/30 transition-shadow"
                   >
                     {isPlaceholder ? (
-                      <div className="w-full h-64 bg-gray-100 dark:bg-gray-800 rounded-2xl mb-4 flex items-center justify-center">
+                      <div className="w-64 h-64 bg-gray-100 dark:bg-gray-800 rounded-full mb-4 flex items-center justify-center">
                         <span className="text-gray-400 dark:text-gray-500 text-sm font-medium">
                           Your Project Here
                         </span>
@@ -459,10 +459,10 @@ function LandingPage() {
                       <img
                         src={creator.image}
                         alt={creator.name}
-                        className="w-full h-64 object-contain rounded-2xl mb-4"
+                        className="w-64 h-64 object-contain rounded-full mb-4"
                       />
                     )}
-                    <h3 className="text-lg font-semibold text-blue-900 dark:text-blue-100">
+                    <h3 className="text-lg font-semibold text-blue-900 dark:text-blue-100 text-center">
                       {isPlaceholder ? 'Your Project Here' : creator.name}
                     </h3>
                   </div>
