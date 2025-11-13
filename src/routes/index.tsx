@@ -732,6 +732,16 @@ function LandingPage() {
               &copy; {new Date().getFullYear()} Web Forge Conf. All rights
               reserved.
             </p>
+            <div className="mt-4">
+              <a
+                href="https://github.com/tannerlinsley/webforgeconf.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-3 py-1.5 text-xs font-medium text-blue-300 dark:text-gray-500 hover:text-white dark:hover:text-gray-300 bg-blue-900/50 dark:bg-gray-900/50 rounded-full border border-blue-800/50 dark:border-gray-800/50 hover:border-blue-700 dark:hover:border-gray-700 transition-colors"
+              >
+                Built with TanStack Start
+              </a>
+            </div>
           </div>
         </div>
       </footer>
