@@ -29,20 +29,24 @@ Thank you for being part of Web Forge Conference! This guide will help you add y
 ```json
 {
   "name": "Your Project Name",
-  "image": "/creators/your-logo-filename.png"
+  "image": "/creators/your-logo-filename.png",
+  "url": "https://your-project-website.com"
 }
 ```
 
 **Example:**
 
-If your project is called "Awesome Framework" and your logo file is `awesome-framework.png`, your entry would look like:
+If your project is called "Awesome Framework", your logo file is `awesome-framework.png`, and your website is `https://awesomeframework.com`, your entry would look like:
 
 ```json
 {
   "name": "Awesome Framework",
-  "image": "/creators/awesome-framework.png"
+  "image": "/creators/awesome-framework.png",
+  "url": "https://awesomeframework.com"
 }
 ```
+
+**Note**: The `url` field is optional. If you don't provide a URL, the card won't be clickable.
 
 ### 4. Complete Example
 
@@ -52,15 +56,18 @@ Here's what a complete `creators.json` file might look like with multiple entrie
 [
   {
     "name": "TanStack",
-    "image": "/creators/tanstack.png"
+    "image": "/creators/tanstack.png",
+    "url": "https://tanstack.com"
   },
   {
     "name": "Awesome Framework",
-    "image": "/creators/awesome-framework.png"
+    "image": "/creators/awesome-framework.png",
+    "url": "https://awesomeframework.com"
   },
   {
     "name": "Your Project",
-    "image": "/creators/your-project.png"
+    "image": "/creators/your-project.png",
+    "url": "https://yourproject.com"
   }
 ]
 ```

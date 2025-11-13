@@ -84,28 +84,45 @@ function LandingPage() {
                 const creator = creatorsData[index]
                 const isPlaceholder = !creator
 
-                return (
-                  <div key={index} className="group relative">
-                    {isPlaceholder ? (
-                      <a
-                        href={FORM_URLS.creator}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-12 h-12 rounded-full bg-gray-200 dark:bg-gray-700 border-2 border-dashed border-gray-400 dark:border-gray-600 hover:scale-110 hover:border-blue-500 dark:hover:border-blue-400 transition-all cursor-pointer flex items-center justify-center"
-                      >
-                        <span className="text-gray-500 dark:text-gray-400 text-lg font-light group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                          +
-                        </span>
-                      </a>
-                    ) : creator.image ? (
+                const badgeContent = isPlaceholder ? (
+                  <a
+                    href={FORM_URLS.creator}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-12 h-12 rounded-full bg-gray-200 dark:bg-gray-700 border-2 border-dashed border-gray-400 dark:border-gray-600 hover:scale-110 hover:border-blue-500 dark:hover:border-blue-400 transition-all cursor-pointer flex items-center justify-center"
+                  >
+                    <span className="text-gray-500 dark:text-gray-400 text-lg font-light group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                      +
+                    </span>
+                  </a>
+                ) : creator.image ? (
+                  creator.url ? (
+                    <a
+                      href={creator.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block"
+                    >
                       <img
                         src={creator.image}
                         alt={creator.name}
                         className="w-12 h-12 rounded-full object-contain bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-0.5 hover:scale-110 transition-transform cursor-pointer"
                       />
-                    ) : (
-                      <div className="w-12 h-12 rounded-full bg-gray-200 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 hover:scale-110 transition-transform cursor-pointer" />
-                    )}
+                    </a>
+                  ) : (
+                    <img
+                      src={creator.image}
+                      alt={creator.name}
+                      className="w-12 h-12 rounded-full object-contain bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-0.5 hover:scale-110 transition-transform cursor-pointer"
+                    />
+                  )
+                ) : (
+                  <div className="w-12 h-12 rounded-full bg-gray-200 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 hover:scale-110 transition-transform cursor-pointer" />
+                )
+
+                return (
+                  <div key={index} className="group relative">
+                    {badgeContent}
                     {isPlaceholder ? (
                       <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-gray-900 dark:bg-gray-800 text-white text-sm font-medium rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10">
                         Become a creator
@@ -444,13 +461,10 @@ function LandingPage() {
                 const creator = creatorsData[index]
                 const isPlaceholder = !creator
 
-                return (
-                  <div
-                    key={index}
-                    className="flex flex-col items-center bg-white dark:bg-gray-900 rounded-full p-6 shadow-2xl shadow-black/10 dark:shadow-black/20 hover:shadow-2xl hover:shadow-black/15 dark:hover:shadow-black/30 transition-shadow"
-                  >
+                const content = (
+                  <>
                     {isPlaceholder ? (
-                      <div className="w-64 h-64 bg-gray-100 dark:bg-gray-800 rounded-full mb-4 flex items-center justify-center">
+                      <div className="w-64 h-64 bg-gray-200 dark:bg-gray-700 rounded-full mb-4 flex items-center justify-center border-2 border-dashed border-gray-300 dark:border-gray-600">
                         <span className="text-gray-400 dark:text-gray-500 text-sm font-medium">
                           Your Project Here
                         </span>
@@ -465,6 +479,26 @@ function LandingPage() {
                     <h3 className="text-lg font-semibold text-blue-900 dark:text-blue-100 text-center">
                       {isPlaceholder ? 'Your Project Here' : creator.name}
                     </h3>
+                  </>
+                )
+
+                return (
+                  <div
+                    key={index}
+                    className="flex flex-col items-center"
+                  >
+                    {isPlaceholder || !creator.url ? (
+                      content
+                    ) : (
+                      <a
+                        href={creator.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex flex-col items-center hover:opacity-80 transition-opacity"
+                      >
+                        {content}
+                      </a>
+                    )}
                   </div>
                 )
               },
