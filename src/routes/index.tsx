@@ -14,6 +14,7 @@ import {
 } from 'react-icons/lu'
 import { FaDiscord, FaXTwitter } from 'react-icons/fa6'
 import { SiBluesky } from 'react-icons/si'
+import creatorsData from '../data/creators.json'
 
 // Google Form URLs for each type
 const FORM_URLS = {
@@ -74,6 +75,53 @@ function LandingPage() {
             developers — full stack, TypeScript, JavaScript, HTML, CSS, and
             everything in between.
           </p>
+          <div className="mb-8">
+            <p className="text-sm text-gray-500 dark:text-gray-400 mb-3">
+              Featuring creators from
+            </p>
+            <div className="flex flex-wrap items-center justify-center gap-3">
+              {Array.from({ length: 5 }).map((_, index) => {
+                const creator = creatorsData[index]
+                const isPlaceholder = !creator
+
+                return (
+                  <div key={index} className="group relative">
+                    {isPlaceholder ? (
+                      <a
+                        href={FORM_URLS.creator}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-12 h-12 rounded-full bg-gray-200 dark:bg-gray-700 border-2 border-dashed border-gray-400 dark:border-gray-600 hover:scale-110 hover:border-blue-500 dark:hover:border-blue-400 transition-all cursor-pointer flex items-center justify-center"
+                      >
+                        <span className="text-gray-500 dark:text-gray-400 text-lg font-light group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                          +
+                        </span>
+                      </a>
+                    ) : creator.image ? (
+                      <img
+                        src={creator.image}
+                        alt={creator.name}
+                        className="w-12 h-12 rounded-full object-contain bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-0.5 hover:scale-110 transition-transform cursor-pointer"
+                      />
+                    ) : (
+                      <div className="w-12 h-12 rounded-full bg-gray-200 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 hover:scale-110 transition-transform cursor-pointer" />
+                    )}
+                    {isPlaceholder ? (
+                      <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-gray-900 dark:bg-gray-800 text-white text-sm font-medium rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10">
+                        Become a creator
+                        <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-gray-900 dark:border-t-gray-800" />
+                      </div>
+                    ) : (
+                      <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-gray-900 dark:bg-gray-800 text-white text-sm font-medium rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10">
+                        {creator.name}
+                        <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-gray-900 dark:border-t-gray-800" />
+                      </div>
+                    )}
+                  </div>
+                )
+              })}
+            </div>
+          </div>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
             <a
               href="#signup"
@@ -391,31 +439,36 @@ function LandingPage() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-6 mb-12">
-            <div className="bg-white dark:bg-gray-900 rounded-3xl p-6 shadow-2xl shadow-black/10 dark:shadow-black/20 hover:shadow-2xl hover:shadow-black/15 dark:hover:shadow-black/30 transition-shadow">
-              <img
-                src="/creators/tanstack.png"
-                alt="TanStack"
-                className="w-full h-64 object-contain rounded-2xl mb-4"
-              />
-              <h3 className="text-lg font-semibold text-blue-900 dark:text-blue-100">
-                TanStack
-              </h3>
-            </div>
-            {[1, 2].map((i) => (
-              <div
-                key={i}
-                className="bg-white dark:bg-gray-900 rounded-3xl p-6 shadow-2xl shadow-black/10 dark:shadow-black/20 hover:shadow-2xl hover:shadow-black/15 dark:hover:shadow-black/30 transition-shadow"
-              >
-                <div className="w-full h-64 bg-gray-100 dark:bg-gray-800 rounded-2xl mb-4 flex items-center justify-center">
-                  <span className="text-gray-400 dark:text-gray-500 text-sm font-medium">
-                    Your Project Here
-                  </span>
-                </div>
-                <h3 className="text-lg font-semibold text-blue-900 dark:text-blue-100">
-                  Your Project Here
-                </h3>
-              </div>
-            ))}
+            {Array.from({ length: Math.max(3, creatorsData.length) }).map(
+              (_, index) => {
+                const creator = creatorsData[index]
+                const isPlaceholder = !creator
+
+                return (
+                  <div
+                    key={index}
+                    className="bg-white dark:bg-gray-900 rounded-3xl p-6 shadow-2xl shadow-black/10 dark:shadow-black/20 hover:shadow-2xl hover:shadow-black/15 dark:hover:shadow-black/30 transition-shadow"
+                  >
+                    {isPlaceholder ? (
+                      <div className="w-full h-64 bg-gray-100 dark:bg-gray-800 rounded-2xl mb-4 flex items-center justify-center">
+                        <span className="text-gray-400 dark:text-gray-500 text-sm font-medium">
+                          Your Project Here
+                        </span>
+                      </div>
+                    ) : (
+                      <img
+                        src={creator.image}
+                        alt={creator.name}
+                        className="w-full h-64 object-contain rounded-2xl mb-4"
+                      />
+                    )}
+                    <h3 className="text-lg font-semibold text-blue-900 dark:text-blue-100">
+                      {isPlaceholder ? 'Your Project Here' : creator.name}
+                    </h3>
+                  </div>
+                )
+              },
+            )}
           </div>
 
           <div className="text-center">
