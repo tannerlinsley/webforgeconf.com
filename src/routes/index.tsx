@@ -483,10 +483,7 @@ function LandingPage() {
                 )
 
                 return (
-                  <div
-                    key={index}
-                    className="flex flex-col items-center"
-                  >
+                  <div key={index} className="flex flex-col items-center">
                     {isPlaceholder || !creator.url ? (
                       content
                     ) : (
@@ -512,6 +509,16 @@ function LandingPage() {
             >
               Apply to be a creator
             </a>
+            <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">
+              <a
+                href="https://docs.google.com/document/d/1UaK47KV2ZT3PjurUFDntHkX1_gDi2CT_zIngiInEtZM/edit?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 underline transition-colors"
+              >
+                Learn about our VIP Framework and selection process
+              </a>
+            </p>
           </div>
         </div>
       </section>
@@ -850,7 +857,7 @@ function LandingPage() {
       {/* Footer */}
       <footer className="py-12 px-6 bg-blue-950 dark:bg-black text-blue-200 dark:text-gray-400">
         <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8 mb-8">
+          <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
               <h3 className="text-white dark:text-gray-200 font-semibold mb-3">
                 Mission
@@ -874,6 +881,29 @@ function LandingPage() {
             </div>
             <div>
               <h3 className="text-white dark:text-gray-200 font-semibold mb-3">
+                Resources
+              </h3>
+              <div className="flex flex-col gap-2">
+                <a
+                  href="https://docs.google.com/document/d/1UaK47KV2ZT3PjurUFDntHkX1_gDi2CT_zIngiInEtZM/edit?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-300 dark:text-gray-500 hover:text-white dark:hover:text-gray-300 transition-colors"
+                >
+                  VIP Framework
+                </a>
+                <a
+                  href="https://github.com/tannerlinsley/webforgeconf.com/blob/main/CREATORS.md"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-300 dark:text-gray-500 hover:text-white dark:hover:text-gray-300 transition-colors"
+                >
+                  Creator Guide
+                </a>
+              </div>
+            </div>
+            <div>
+              <h3 className="text-white dark:text-gray-200 font-semibold mb-3">
                 Links
               </h3>
               <div className="flex flex-col gap-2">
@@ -886,13 +916,17 @@ function LandingPage() {
                   Discord
                 </a>
                 <a
-                  href="https://github.com/webforgeconf"
+                  href="https://github.com/tannerlinsley/webforgeconf.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-blue-300 dark:text-gray-500 hover:text-white dark:hover:text-gray-300 transition-colors"
                 >
                   GitHub
                 </a>
                 <a
                   href="https://twitter.com/webforgeconf"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-blue-300 dark:text-gray-500 hover:text-white dark:hover:text-gray-300 transition-colors"
                 >
                   Twitter
