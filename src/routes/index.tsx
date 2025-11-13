@@ -606,6 +606,16 @@ function LandingPage() {
             >
               Become a sponsor
             </a>
+            <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">
+              <a
+                href="https://docs.google.com/document/d/19vtBnEQ3kNSHyzozkwx0tmCKBd4Y7m2n1q8LTSEwunc/edit?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 underline transition-colors"
+              >
+                View our Sponsorship Prospectus
+              </a>
+            </p>
           </div>
         </div>
       </section>
@@ -891,6 +901,14 @@ function LandingPage() {
                   className="text-blue-300 dark:text-gray-500 hover:text-white dark:hover:text-gray-300 transition-colors"
                 >
                   VIP Framework
+                </a>
+                <a
+                  href="https://docs.google.com/document/d/19vtBnEQ3kNSHyzozkwx0tmCKBd4Y7m2n1q8LTSEwunc/edit?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-300 dark:text-gray-500 hover:text-white dark:hover:text-gray-300 transition-colors"
+                >
+                  Sponsorship Prospectus
                 </a>
                 <a
                   href="https://github.com/tannerlinsley/webforgeconf.com/blob/main/CREATORS.md"
