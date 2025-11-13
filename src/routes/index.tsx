@@ -179,11 +179,11 @@ function LandingPage() {
               Sponsors
             </a>
             <a
-              href="#organizer"
+              href="#partner"
               className="px-6 py-3 bg-white dark:bg-gray-800 hover:bg-blue-50 dark:hover:bg-gray-700 text-blue-600 dark:text-blue-400 font-medium rounded-2xl transition-colors border border-blue-200 dark:border-gray-700 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 flex items-center gap-2"
             >
               <LuUsers className="w-5 h-5" />
-              Organizers
+              Partners
             </a>
           </div>
         </div>
@@ -620,36 +620,60 @@ function LandingPage() {
         </div>
       </section>
 
-      {/* Organizer Section */}
+      {/* Partners Section */}
       <section
-        id="organizer"
+        id="partner"
         className="relative py-40 px-6 bg-blue-50 dark:bg-gray-800 scroll-mt-36"
       >
         <div className="max-w-6xl mx-auto">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
             <a
-              href="#organizer"
+              href="#partner"
               className="inline-block px-10 py-5 bg-white/80 dark:bg-gray-900/70 backdrop-blur-md text-gray-900 dark:text-white text-4xl md:text-5xl font-display rounded-full border-2 border-white/40 dark:border-white/20 shadow-2xl shadow-black/30 dark:shadow-lg hover:bg-white dark:hover:bg-gray-900 transition-colors cursor-pointer"
             >
-              For Organizers
+              For Partners
             </a>
           </div>
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-              Help produce the first creator centered developer event
+              Partner with us to build something different
             </h2>
             <p className="text-xl text-gray-700 dark:text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Developers don't attend conferences to watch slides anymore — they
-              attend to connect. This format replaces stages with conversations.
-              We're looking for an operations partner who can handle logistics,
-              production, and venue management while we bring the vision,
-              format, and creator network.
+              We're looking for two types of partners: operations partners who
+              can handle logistics, production, and venue management, and media
+              partners — influencers and content creators who can help us build
+              buzz, create marketing materials, livestream micro-interactions,
+              and serve as the media foundation for the event.
             </p>
           </div>
 
           <div className="mb-12">
             <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6 text-center">
-              Why It Works
+              Types of Partnerships
+            </h3>
+            <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-8">
+              <div className="bg-white dark:bg-gray-900 rounded-2xl p-6 shadow-2xl shadow-black/10 dark:shadow-black/20">
+                <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
+                  Operations Partners
+                </h4>
+                <p className="text-gray-600 dark:text-gray-400 text-sm">
+                  Handle logistics, production, and venue management. We bring
+                  the vision, format, and creator network.
+                </p>
+              </div>
+              <div className="bg-white dark:bg-gray-900 rounded-2xl p-6 shadow-2xl shadow-black/10 dark:shadow-black/20">
+                <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
+                  Media Partners
+                </h4>
+                <p className="text-gray-600 dark:text-gray-400 text-sm">
+                  Content creators and influencers who'll be VIPs, create
+                  marketing materials, livestream interactions, and build buzz
+                  around the event.
+                </p>
+              </div>
+            </div>
+            <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6 text-center">
+              Why Partner With Us
             </h3>
             <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
               <div className="bg-white dark:bg-gray-900 rounded-2xl p-6 shadow-2xl shadow-black/10 dark:shadow-black/20">
@@ -672,10 +696,11 @@ function LandingPage() {
               </div>
               <div className="bg-white dark:bg-gray-900 rounded-2xl p-6 shadow-2xl shadow-black/10 dark:shadow-black/20">
                 <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
-                  Fresh monetization
+                  Media-first approach
                 </h4>
                 <p className="text-gray-600 dark:text-gray-400 text-sm">
-                  Sponsors get immersive "zones" instead of logo booths.
+                  No traditional stage or expensive A/V. Media partners provide
+                  coverage and content creation in exchange for exposure.
                 </p>
               </div>
               <div className="bg-white dark:bg-gray-900 rounded-2xl p-6 shadow-2xl shadow-black/10 dark:shadow-black/20">
@@ -695,7 +720,7 @@ function LandingPage() {
               href={FORM_URLS.organizer}
               className="inline-block px-8 py-4 bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white font-semibold rounded-2xl transition-colors shadow-lg shadow-blue-500/20 dark:shadow-blue-500/30 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800"
             >
-              I want to help organize
+              Become a partner
             </a>
           </div>
         </div>
@@ -785,7 +810,7 @@ function LandingPage() {
               href={FORM_URLS.organizer}
               className="px-6 py-4 bg-white hover:bg-blue-50 dark:bg-white dark:hover:bg-gray-100 text-blue-900 dark:text-gray-900 font-semibold rounded-2xl transition-colors border border-white/20 shadow-lg focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-900 dark:focus:ring-offset-gray-950"
             >
-              I am an organizer or partner
+              I am a partner
             </a>
           </div>
           <a
@@ -817,7 +842,7 @@ function LandingPage() {
               Join the Community
             </h2>
             <p className="text-xl text-indigo-100 dark:text-indigo-200 mb-4 max-w-2xl mx-auto leading-relaxed">
-              Connect with fellow developers, creators, and organizers in our
+              Connect with fellow developers, creators, and partners in our
               Discord server. Share your ideas, excitement, and help shape the
               future of Web Forge Conference.
             </p>

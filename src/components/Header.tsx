@@ -41,10 +41,10 @@ export default function Header() {
             </Link>
             <Link
               to="/"
-              hash="organizer"
+              hash="partner"
               className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
             >
-              Organizers
+              Partners
             </Link>
             <Link
               to="/"
